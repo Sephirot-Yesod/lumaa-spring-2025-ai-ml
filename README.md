@@ -14,10 +14,20 @@ This project implements a **content-based movie recommendation system** using **
 
 ### Prerequisites
 
-Ensure you have Python 3.10 (gensim is **not yet compatible** with the newest version of Python!) installed along with the required dependencies:
+Ensure you activate the virtual environment (.venv):
 
 ```bash
-pip install pandas numpy gensim argparse
+source .venv/bin/activate
+```
+
+The virtual environment should be in Python 3.10 (gensim is **not yet compatible** with the newest version of Python!).
+The command line 
+```
+python --version
+```
+should output:
+```
+Python 3.10.16
 ```
 
 ### Dataset
@@ -46,12 +56,12 @@ This is a description of Wolf of Wallstreet if you haven't noticed! I **LOVE** t
 
 ```
 Top Recommendations:
-    Title               Similarity
-1   The Wolf of Wall Street             0.376509
-2   Touch of Evil            0.165567
-3   Sin City          0.156059
-4   The Game     0.154993
-5   Chinatown       0.147820
+    Title                        Similarity
+1   The Wolf of Wall Street      0.376509
+2   Touch of Evil                0.165567
+3   Sin City                     0.156059
+4   The Game                     0.154993
+5   Chinatown                    0.147820
 ```
 
 ## Code Overview
