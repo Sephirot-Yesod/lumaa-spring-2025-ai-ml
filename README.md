@@ -70,4 +70,6 @@ Top Recommendations:
 - Implement **word embeddings (e.g., Word2Vec, BERT)** for better similarity matching.
 - Allow filtering recommendations by **genres, year, or director**.
 
+## Expected Salary
+- 1600$ per month
 ---
