@@ -1,19 +1,20 @@
-# Movie Recommendation System
+# Movie Title Finder: Identify Your Movie Based on a Description
+Have you ever had those times when you are **really** trying to recomend a movie to a friend? but you happened to **FORGET** its name? No worries, this project is to solve exactly that problem! As long as you have a **vague memory** of what the movie is about, we will help you find its title!
 
-This project implements a **content-based movie recommendation system** using **TF-IDF** (Term Frequency-Inverse Document Frequency) and **cosine similarity**. It takes a dataset of **top 500 IMDB movies**, processes their descriptions, and recommends the most relevant movies based on a user's input query.
+This project implements a **content-based movie recommendation system** using **TF-IDF** (Term Frequency-Inverse Document Frequency) and **cosine similarity**. It takes a dataset of **top 500 IMDB movies**, processes the, and recommends the most relevant movies based on a user's input query.
 
 ## Features
 
 - **Preprocess movie descriptions** using `gensim` text processing tools.
 - **Build a TF-IDF model** for feature extraction.
 - **Compute similarities** using a **cosine similarity matrix**.
-- **Recommend movies** based on user input.
+- **Provide movie title** based on user input.
 
 ## Installation
 
 ### Prerequisites
 
-Ensure you have Python 3 installed along with the required dependencies:
+Ensure you have Python 3.10 (gensim is **not yet compatible** with the newest version of Python!) installed along with the required dependencies:
 
 ```bash
 pip install pandas numpy gensim argparse
@@ -33,22 +34,24 @@ Make sure the CSV file is present in the same directory as the script.
 
 ## Usage
 
-To run the recommendation system, execute the script with a **query describing your movie preferences**:
+To run the title finding system, execute the script with a **query describing your movie's plot description**:
 
 ```bash
-python movie_recommender.py "A thrilling adventure with futuristic themes"
+python contentRecommender.py "A wealthy stockbroker’s lavish life unravels amid crime and corruption."
 ```
+
+This is a description of Wolf of Wallstreet if you haven't noticed! I **LOVE** that movie!
 
 ### Example Output
 
 ```
 Top Recommendations:
     Title               Similarity
-1   Inception             0.768
-2   The Matrix            0.745
-3   Interstellar          0.723
-4   Blade Runner 2049     0.700
-5   Minority Report       0.678
+1   The Wolf of Wall Street             0.376509
+2   Touch of Evil            0.165567
+3   Sin City          0.156059
+4   The Game     0.154993
+5   Chinatown       0.147820
 ```
 
 ## Code Overview
@@ -61,8 +64,9 @@ Top Recommendations:
 
 ## Notes
 
-- The recommendations are based on text similarity, so results depend on how well the descriptions capture the movie's themes.
+- The recommendations are based on text similarity, so results depend on how well the descriptions capture the movie's plot.
 - The system works best when descriptions are **well-written and descriptive**.
+
 
 ## Future Improvements
 
